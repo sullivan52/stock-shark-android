@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StockShark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/shark_blue</item>
+        <item name="colorPrimaryDark">@color/shark_blue</item>
+        <item name="colorAccent">@color/shark_blue</item>
+    </style>
+</resources>

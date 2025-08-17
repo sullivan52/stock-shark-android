@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Top App Bar-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/toolbar_background"
+        android:clipToPadding="false"
+        android:elevation="@dimen/toolbar_elevation"
+        android:fitsSystemWindows="true"
+        android:gravity="center_vertical"
+        android:minHeight="56dp"
+        app:contentInsetEnd="16dp"
+        app:contentInsetStart="16dp"
+        app:iconTint="@color/shark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_app_bar_menu"
+        app:navigationIconTint="@color/shark_blue"
+        app:title="@string/dashboard_title"
+        app:titleCentered="false"
+        app:titleTextAppearance="@style/StockSharkToolbarTitle"
+        app:titleTextColor="@color/shark_blue" />
+
+    <!-- Empty State Container - Shows when no items exist -->
+    <LinearLayout
+        android:id="@+id/emptyStateContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/empty_state_padding"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/empty_state_icon_size"
+            android:layout_height="@dimen/empty_state_icon_size"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:alpha="0.6"
+            android:contentDescription="@string/empty_inventory_icon_desc"
+            android:src="@drawable/ic_inventory_empty"
+            app:tint="@color/shark_blue_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:text="@string/empty_inventory_title"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textColor="@color/text_primary"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:gravity="center"
+            android:text="@string/empty_inventory_subtitle"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView with improved accessibility and performance -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewInventory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:contentDescription="@string/inventory_list_desc"
+        android:focusable="true"
+        android:nestedScrollingEnabled="true"
+        android:overScrollMode="ifContentScrolls"
+        android:padding="@dimen/recycler_view_padding"
+        android:paddingBottom="@dimen/recycler_view_bottom_padding"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_inventory_card" />
+
+    <!-- Loading Indicator - Shows during data operations -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/shark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        tools:visibility="visible" />
+
+    <!-- Extended Floating Action Button with Material Design 3 styling -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/add_item_desc"
+        android:text="@string/add_item_text"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/shark_blue"
+        app:elevation="@dimen/fab_elevation"
+        app:icon="@drawable/ic_add_24"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/shark_blue_ripple"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
+
+    <!-- Snackbar Anchor Point - Ensures snackbars appear above FAB -->
+    <View
+        android:id="@+id/snackbarAnchor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/fabAddItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

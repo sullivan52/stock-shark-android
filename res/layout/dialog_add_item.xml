@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_large">
+
+    <!-- Dialog Header Text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:text="@string/dialog_add_item_subtitle"
+        android:textColor="@color/text_secondary" />
+
+    <!-- Item Name Input with Material Design TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDialogItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:hint="@string/hint_item_name"
+        app:boxStrokeColor="@color/shark_blue"
+        app:counterEnabled="true"
+        app:counterMaxLength="@integer/max_item_name_length"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperText="@string/helper_item_name"
+        app:helperTextTextColor="@color/text_secondary"
+        app:startIconDrawable="@drawable/ic_inventory_24"
+        app:startIconTint="@color/shark_blue_light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDialogItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_desc_item_name_field"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:maxLength="@integer/max_item_name_length"
+            android:nextFocusDown="@id/etDialogItemQuantity" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Item Quantity Input with Material Design TextInputLayout -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDialogItemQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_item_quantity"
+        app:boxStrokeColor="@color/shark_blue"
+        app:endIconMode="custom"
+        app:endIconTint="@color/shark_blue_light"
+        app:errorEnabled="true"
+        app:helperText="@string/helper_item_quantity"
+        app:helperTextTextColor="@color/text_secondary"
+        app:startIconDrawable="@drawable/ic_numbers_24"
+        app:startIconTint="@color/shark_blue_light">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDialogItemQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/content_desc_item_quantity_field"
+            android:digits="0123456789"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="@integer/max_quantity_digits" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Input Guidelines -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        app:cardBackgroundColor="@color/surface_variant"
+        app:cardCornerRadius="@dimen/button_corner_radius"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/spacing_small"
+                android:gravity="center_vertical"
+                android:text="@string/input_guidelines_title"
+                android:textColor="@color/text_primary"
+                app:drawableStartCompat="@drawable/ic_info_24"
+                app:drawableTint="@color/shark_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="@string/input_guidelines_text"
+                android:textColor="@color/text_secondary" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

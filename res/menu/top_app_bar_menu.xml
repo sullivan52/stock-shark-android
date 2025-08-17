@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- SMS Notifications Icon -->
+    <item
+        android:id="@+id/action_notifications"
+        android:icon="@drawable/ic_notifications_24"
+        android:title="SMS Notifications"
+        android:contentDescription="Set up SMS notifications for low stock alerts"
+        app:iconTint="@color/shark_blue"
+        app:showAsAction="always" />
+
+    <!-- Future Features -->
+    <!--
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_24"
+        android:title="Search Inventory"
+        app:iconTint="@color/shark_blue"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_24"
+        android:title="Settings"
+        app:showAsAction="never" />
+    -->
+
+</menu>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Item Validation -->
+    <integer name="max_item_name_length">255</integer>
+    <integer name="max_quantity_digits">6</integer>
+
+    <!-- Username Validation -->
+    <integer name="min_username_length">3</integer>
+    <integer name="max_username_length">30</integer>
+
+    <!-- Password Validation -->
+    <integer name="min_password_length">8</integer>
+    <integer name="max_password_length">128</integer>
+
+    <!-- Quantity Validation -->
+    <integer name="min_quantity">0</integer>
+    <integer name="max_quantity">999999</integer>
+
+    <!-- Phone Number Validation (for SMS) -->
+    <integer name="min_phone_length">10</integer>
+    <integer name="max_phone_length">15</integer>
+
+    <!-- Security Constants -->
+    <integer name="max_login_attempts">5</integer>
+    <integer name="lockout_duration_minutes">5</integer>
+</resources>

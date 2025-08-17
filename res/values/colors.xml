@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="shark_blue">#61A5CC</color>
+    <color name="shark_blue_dark">#4B8AB1</color>
+    <color name="shark_gray">#D3DDE6</color>
+    <color name="toolbar_background">#616161</color>
+
+    <!-- Enhanced Shark Blue Variants -->
+    <color name="shark_blue_light">#8BC6E0</color>
+    <color name="shark_blue_ripple">#4D61A5CC</color>
+
+    <!-- Material Design 3 Surface Colors -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F5F7FA</color>
+    <color name="background_primary">#FAFBFC</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_shadow">#80000000</color>
+
+    <!-- Interactive Colors -->
+    <color name="link_color">#61A5CC</color>
+    <color name="button_ripple">#4D61A5CC</color>
+
+    <!-- Card and Border Colors -->
+    <color name="card_stroke">#E0E0E0</color>
+
+    <!-- State Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+    <!-- State Container Colors (Material Design 3) -->
+    <color name="error_container">#FFEBEE</color>
+    <color name="on_error_container">#C62828</color>
+    <color name="info_container">#E3F2FD</color>
+    <color name="on_info_container">#1565C0</color>
+
+    <!-- Ripple Effects -->
+    <color name="error_ripple">#4DF44336</color>
+
+    <!-- Password Strength Colors -->
+    <color name="password_weak">#F44336</color>
+    <color name="password_medium">#FF9800</color>
+    <color name="password_strong">#4CAF50</color>
+
+    <!-- Legacy Support (keeping your original colors for backwards compatibility) -->
+    <!-- These can be removed later if not used elsewhere -->
+</resources>

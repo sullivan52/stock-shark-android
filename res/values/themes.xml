@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StockShark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/shark_blue</item>
+        <item name="colorPrimaryDark">@color/shark_blue</item>
+        <item name="colorAccent">@color/shark_blue</item>
+    </style>
+
+    <style name="Theme.StockShark" parent="Base.Theme.StockShark" />
+
+    <style name="StockSharkToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/fredoka_one</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/shark_blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

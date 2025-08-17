@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_extra_large">32dp</dimen>
+
+    <!-- Activity Margins -->
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin_large">48dp</dimen>
+
+    <!-- Logo -->
+    <dimen name="logo_size">120dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_title">28sp</dimen>
+    <dimen name="text_size_button">16sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+
+    <!-- Button -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="button_stroke_width">2dp</dimen>
+    <dimen name="button_max_width">400dp</dimen>
+
+    <!-- Password Strength -->
+    <dimen name="password_strength_height">4dp</dimen>
+
+    <!-- Loading Indicator -->
+    <dimen name="loading_indicator_size">24dp</dimen>
+
+    <!-- Shadow -->
+    <dimen name="shadow_offset_small">1dp</dimen>
+    <dimen name="shadow_radius_small">1dp</dimen>
+
+    <!-- Content -->
+    <dimen name="min_content_height">600dp</dimen>
+
+    <!-- Dashboard specific dimensions -->
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="toolbar_top_padding">16dp</dimen>
+    <dimen name="recycler_view_padding">16dp</dimen>
+    <dimen name="recycler_view_bottom_padding">88dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="empty_state_padding">32dp</dimen>
+    <dimen name="empty_state_icon_size">120dp</dimen>
+
+    <!-- Card Dimensions -->
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_stroke_width">1dp</dimen>
+    <dimen name="card_content_padding">16dp</dimen>
+
+    <!-- Inventory Item Card Dimensions -->
+    <dimen name="item_icon_size">40dp</dimen>
+    <dimen name="quantity_button_size">40dp</dimen>
+    <dimen name="quantity_button_icon_size">18dp</dimen>
+    <dimen name="quantity_display_min_width">48dp</dimen>
+    <dimen name="delete_button_size">48dp</dimen>
+    <dimen name="delete_button_icon_size">20dp</dimen>
+    <dimen name="low_stock_indicator_width">4dp</dimen>
+
+    <!-- SMS Notifications Screen -->
+    <dimen name="illustration_size">120dp</dimen>
+    <dimen name="back_button_size">48dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+
+    <!-- Form Input Dimensions -->
+    <dimen name="input_field_height">56dp</dimen>
+    <dimen name="input_field_corner_radius">4dp</dimen>
+
+    <!-- Dialog Dimensions -->
+    <dimen name="dialog_corner_radius">16dp</dimen>
+    <dimen name="dialog_content_padding">24dp</dimen>
+
+    <!-- Ripple Effect Dimensions -->
+    <dimen name="ripple_radius">20dp</dimen>
+
+    <!-- Material Design 3 Container Dimensions -->
+    <dimen name="container_corner_radius">12dp</dimen>
+    <dimen name="container_padding">16dp</dimen>
+
+    <!-- Touch Target Minimums (Accessibility) -->
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="touch_target_recommended">56dp</dimen>
+
+    <!-- Layout Constraints -->
+    <dimen name="max_content_width">600dp</dimen>
+    <dimen name="tablet_margin">48dp</dimen>
+</resources>

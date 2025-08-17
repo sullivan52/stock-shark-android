@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/surface"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:rippleColor="@color/shark_blue_ripple"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Item Name -->
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/quantityControlsLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvItemSubtitle"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Sample Item Name" />
+
+        <!-- Item Subtitle -->
+        <TextView
+            android:id="@+id/tvItemSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="In Stock"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintEnd_toStartOf="@id/quantityControlsLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvItemName"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Quantity Controls Layout -->
+        <LinearLayout
+            android:id="@+id/quantityControlsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Decrease Button -->
+            <TextView
+                android:id="@+id/btnDecrease"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="−"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/shark_blue"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Decrease quantity" />
+
+            <!-- Quantity Display -->
+            <TextView
+                android:id="@+id/tvItemQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/quantity_background"
+                android:gravity="center"
+                android:minWidth="48dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="4dp"
+                tools:text="50" />
+
+            <!-- Increase Button -->
+            <TextView
+                android:id="@+id/btnIncrease"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/shark_blue"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Increase quantity" />
+
+        </LinearLayout>
+
+        <!-- Delete Button (using Android built-in) -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="Delete item"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/shark_blue" />
+
+        <!-- Low Stock Indicator (only visible when quantity is low) -->
+        <View
+            android:id="@+id/lowStockIndicator"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="@color/warning"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

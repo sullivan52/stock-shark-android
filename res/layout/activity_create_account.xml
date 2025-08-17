@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin_large"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/background_primary"
+    tools:context=".CreateAccountActivity">
+
+    <!-- Scrollable container for better accessibility on small screens -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_content_height">
+
+            <!-- Logo Image -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="@dimen/logo_size"
+                android:layout_height="@dimen/logo_size"
+                android:src="@drawable/shark_logo"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/content_desc_app_logo"
+                android:importantForAccessibility="yes"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- App Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:fontFamily="@font/fredoka_one"
+                android:text="@string/create_account_title"
+                android:textAlignment="center"
+                android:textColor="@color/shark_blue"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                android:importantForAccessibility="yes"
+                app:layout_constraintTop_toBottomOf="@id/ivLogo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Username Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:hint="@string/hint_username"
+                app:helperText="@string/helper_username_requirements"
+                app:helperTextEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_person"
+                app:startIconContentDescription="@string/content_desc_username_icon"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName|textNoSuggestions"
+                    android:maxLength="30"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="username"
+                    android:contentDescription="@string/content_desc_username_field" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:hint="@string/hint_password"
+                app:helperText="@string/helper_password_requirements"
+                app:helperTextEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="128"
+                app:errorEnabled="true"
+                app:endIconMode="password_toggle"
+                app:endIconContentDescription="@string/content_desc_password_toggle"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:startIconContentDescription="@string/content_desc_password_icon"
+                app:passwordToggleEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/tilUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLength="128"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="yes"
+                    android:autofillHints="newPassword"
+                    android:contentDescription="@string/content_desc_password_field" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password Strength Indicator -->
+            <ProgressBar
+                android:id="@+id/pbPasswordStrength"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/password_strength_height"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:max="100"
+                android:progress="0"
+                android:progressTint="@color/password_weak"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/tilPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible"
+                tools:progress="50" />
+
+            <!-- Password Strength Label -->
+            <TextView
+                android:id="@+id/tvPasswordStrength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:text="@string/password_strength_weak"
+                android:textSize="@dimen/text_size_caption"
+                android:textColor="@color/password_weak"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/pbPasswordStrength"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible" />
+
+            <!-- Create Account Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="@string/btn_create_account"
+                android:textSize="@dimen/text_size_button"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/shark_blue"
+                app:cornerRadius="@dimen/button_corner_radius"
+                app:rippleColor="@color/button_ripple"
+                app:strokeColor="@color/shark_blue"
+                app:strokeWidth="@dimen/button_stroke_width"
+                app:layout_constraintTop_toBottomOf="@id/tvPasswordStrength"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_max="@dimen/button_max_width" />
+
+            <!-- Loading Indicator -->
+            <ProgressBar
+                android:id="@+id/pbLoading"
+                android:layout_width="@dimen/loading_indicator_size"
+                android:layout_height="@dimen/loading_indicator_size"
+                android:visibility="gone"
+                android:indeterminateTint="@color/shark_blue"
+                app:layout_constraintTop_toTopOf="@id/btnCreateAccount"
+                app:layout_constraintBottom_toBottomOf="@id/btnCreateAccount"
+                app:layout_constraintStart_toStartOf="@id/btnCreateAccount"
+                app:layout_constraintEnd_toEndOf="@id/btnCreateAccount"
+                tools:visibility="visible" />
+
+            <!-- Already have account link -->
+            <TextView
+                android:id="@+id/tvLoginLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/already_have_account"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_body"
+                android:textColor="@color/link_color"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="@dimen/spacing_small"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/content_desc_login_link"
+                app:layout_constraintTop_toBottomOf="@id/btnCreateAccount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

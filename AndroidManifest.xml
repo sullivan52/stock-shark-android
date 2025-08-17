@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shaynesullivan.stockshark">
+
+    <!-- SMS permission -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StockShark"
+        tools:targetApi="31">
+
+        <!-- Launcher Activity - LoginActivity is the entry point -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.StockShark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Account Creation -->
+        <activity
+            android:name=".CreateAccountActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity" />
+
+        <!-- Main Dashboard -->
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <!-- SMS Notifications Setup -->
+        <activity
+            android:name=".SmsNotificationsActivity"
+            android:exported="false"
+            android:parentActivityName=".DashboardActivity" />
+
+        <!-- Fonts -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+</manifest>

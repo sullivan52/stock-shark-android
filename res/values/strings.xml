@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">Stock Shark</string>
+
+    <!-- Login Screen -->
+    <string name="hint_login_username">Username</string>
+    <string name="hint_login_password">Password</string>
+
+    <!-- Create Account Screen -->
+    <string name="create_account_title">Create Account</string>
+    <string name="hint_username">Enter a Username</string>
+    <string name="hint_password">Create a Password</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="already_have_account">Already have an account? Sign in</string>
+
+    <!-- Login Screen -->
+    <string name="btn_login">Log In</string>
+    <string name="login_welcome_message">Welcome back! Sign in to manage your inventory.</string>
+    <string name="no_account_link">Don\'t have an account? Create one</string>
+    <string name="forgot_password_link">Forgot your password?</string>
+    <string name="content_desc_create_account_link">Navigate to create account screen</string>
+    <string name="content_desc_forgot_password_link">Get help with forgotten password</string>
+
+    <!-- Helper Text -->
+    <string name="helper_username_requirements">3-30 characters, letters, numbers, and underscores only</string>
+    <string name="helper_password_requirements">At least 8 characters with uppercase, lowercase, and number</string>
+
+    <!-- Password Strength -->
+    <string name="password_strength_weak">Weak</string>
+    <string name="password_strength_medium">Medium</string>
+    <string name="password_strength_strong">Strong</string>
+
+    <!-- Accessibility Content Descriptions -->
+    <string name="content_desc_app_logo">Stock Shark application logo</string>
+    <string name="content_desc_username_icon">Username field icon</string>
+    <string name="content_desc_password_icon">Password field icon</string>
+    <string name="content_desc_password_toggle">Show or hide password</string>
+    <string name="content_desc_username_field">Enter your desired username</string>
+    <string name="content_desc_password_field">Enter your password</string>
+    <string name="content_desc_login_link">Navigate to login screen</string>
+
+    <!-- Dashboard Screen -->
+    <string name="dashboard_title">Your Inventory</string>
+    <string name="add_item_text">Add Item</string>
+    <string name="add_item_desc">Add new inventory item</string>
+    <string name="inventory_list_desc">List of inventory items</string>
+    <string name="empty_inventory_title">No Items Yet</string>
+    <string name="empty_inventory_subtitle">Tap the button below to add your first inventory item</string>
+    <string name="empty_inventory_icon_desc">Empty inventory illustration</string>
+
+    <!-- Inventory Item Card -->
+    <string name="item_quantity_label">In Stock</string>
+    <string name="content_desc_item_icon">Inventory item icon</string>
+    <string name="content_desc_decrease_quantity">Decrease item quantity</string>
+    <string name="content_desc_increase_quantity">Increase item quantity</string>
+    <string name="content_desc_delete_item">Delete this item</string>
+
+    <!-- Dialog Add Item -->
+    <string name="dialog_add_item_subtitle">Enter the details for your new inventory item</string>
+    <string name="hint_item_name">Item Name</string>
+    <string name="hint_item_quantity">Quantity</string>
+    <string name="helper_item_name">Use a descriptive name for easy identification</string>
+    <string name="helper_item_quantity">Enter a number between 0 and 999,999</string>
+    <string name="content_desc_item_name_field">Enter the name of the inventory item</string>
+    <string name="content_desc_item_quantity_field">Enter the quantity of the inventory item</string>
+    <string name="input_guidelines_title">Input Guidelines</string>
+    <string name="input_guidelines_text">• Item names can be up to 255 characters\n• Quantity must be between 0 and 999,999\n• Both fields are required</string>
+
+    <!-- SMS Notifications Screen -->
+    <string name="sms_notifications_title">SMS Notifications</string>
+    <string name="sms_setup_title">Stay Informed</string>
+    <string name="sms_setup_description">Get instant notifications when your inventory items are running low. Never run out of stock again!</string>
+    <string name="sms_features_title">What you\'ll get:</string>
+    <string name="sms_feature_low_stock">Low stock alerts for your items</string>
+    <string name="sms_feature_instant_alerts">Instant notifications via SMS</string>
+    <string name="sms_feature_privacy">Your number stays private and secure</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="helper_phone_format">Format: 123-456-7890 or 1234567890</string>
+    <string name="btn_send_test_sms">Send Test SMS</string>
+    <string name="sms_privacy_notice">Your phone number is only used for inventory notifications and is never shared with third parties.</string>
+    <string name="sms_skip_option">Skip for now</string>
+
+    <!-- SMS Notifications Content Descriptions -->
+    <string name="content_desc_sms_illustration">SMS notifications illustration</string>
+    <string name="content_desc_phone_icon">Phone number field icon</string>
+    <string name="content_desc_phone_field">Enter your phone number for SMS notifications</string>
+    <string name="content_desc_privacy_icon">Privacy information icon</string>
+    <string name="content_desc_skip_sms">Skip SMS setup and continue</string>
+    <string name="content_desc_back_button">Go back to previous screen</string>
+
+    <!-- Navigation and Actions -->
+    <string name="content_desc_back">Navigate back</string>
+    <string name="content_desc_menu">Open menu</string>
+    <string name="content_desc_search">Search inventory</string>
+    <string name="content_desc_filter">Filter items</string>
+    <string name="content_desc_settings">Open settings</string>
+
+    <!-- Error Messages -->
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_validation">Please check your input and try again.</string>
+    <string name="success_item_added">Item added successfully</string>
+    <string name="success_item_updated">Item updated successfully</string>
+    <string name="success_item_deleted">Item deleted successfully</string>
+
+    <!-- Loading States -->
+    <string name="loading_creating_account">Creating your account…</string>
+    <string name="loading_logging_in">Signing you in…</string>
+    <string name="loading_sending_sms">Sending test SMS…</string>
+    <string name="loading_saving">Saving changes…</string>
+
+    <!-- Confirmation Messages -->
+    <string name="confirm_delete_item">Are you sure you want to delete this item?</string>
+    <string name="confirm_delete_yes">Delete</string>
+    <string name="confirm_delete_no">Cancel</string>
+
+</resources>
