@@ -57,3 +57,6 @@ Stock Shark provides an intuitive mobile solution for inventory management chall
 3. Sync Gradle dependencies
 4. Select target device/emulator → Run 'app'
 
+---
+
+*Built using Android SDK, SQLite database, and Material Design components with emphasis on security practices and user experience considerations.*
